@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class Practice {
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: O(n) n represents elements in original array
+  // Space Complexity: O(1) - 1 represents the created arraylist taking in even elements
   // Remember to define your variables!
   public static List<Integer> findEvens(int[] array) {
     List<Integer> evens = new ArrayList<>();
@@ -20,8 +20,8 @@ public class Practice {
   }
 
   // Assume a rectangular array where #rows <= #cols
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: O(n) - looped only through one element through the matrix
+  // Space Complexity: O(1) - no variables grow within scale
   // Remember to define your variables!
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
@@ -32,8 +32,8 @@ public class Practice {
   }
   
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: O(n) where n represents T val in array
+  // Space Complexity: O(n) frequencies grow with the scale of the T array
   // Remember to define your variables!
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
     Map<T, Integer> frequencies = new HashMap<>();
