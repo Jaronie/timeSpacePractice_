@@ -11,7 +11,7 @@ public class PracticeTest {
   public void testTieBreakForMostCommonTimeEfficient() {
     // arrange
     int[] nums = {2, 3, 2, 3};
-    int expected = 1;
+    int expected = 2;
     // act
     int actual = Practice.mostCommonTimeEfficient(nums);
     // assert
