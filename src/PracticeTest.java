@@ -7,4 +7,14 @@ public class PracticeTest {
   // TODO: Implement tests for Practice.mostCommonTimeEfficient and Practice.mostCommonSpaceEfficient
 
   // Hints: They are static methods, so you will use the full Practice.mostCommonTimeEfficient for method calls
+  @Test
+  public void testTieBreakForMostCommonTimeEfficient() {
+    // arrange
+    int[] nums = {2, 3, 2, 3};
+    int expected = 1;
+    // act
+    int actual = Practice.mostCommonTimeEfficient(nums);
+    // assert
+    assertEquals(expected, actual, "tie break by choosing element that appears first.")
+  }
 }
