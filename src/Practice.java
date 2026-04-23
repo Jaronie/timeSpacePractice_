@@ -122,8 +122,8 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity: o(n), because the array goes once when getting the hashmap.
+   * Space Complexity: o(n), the hashmap stores an entry for all elements making it linear.
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
@@ -131,7 +131,31 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.length
-    return -1;
+    //handle edge cases
+    if (nums == null || nums.length == 0) {
+      throw new IllegalArgumentException("Cannot be null or empty");
+    }
+
+    //build map
+    Map<Integer, Integer> counting = new HashMap<>();
+    for (int num : nums) {
+      counting.put(num, counting.getOrDefault(num, 0) + 1);
+    }
+
+    //set up variables
+    int mostPut = nums[0];
+    int max = 0;
+
+    //begin iteration through array
+    for (int num : nums) {
+      int currentCounting = counting.get(num);
+      if (currentCounting > max) {
+        max = currentCounting;
+        mostPut = num;
+      }
+    }
+
+    return mostPut;
   }
 
   /**
