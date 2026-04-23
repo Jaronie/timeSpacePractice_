@@ -176,6 +176,34 @@ public class Practice {
   public static int mostCommonSpaceEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(1) space.
-    return -1;
+
+    int currentNum = nums[0];
+    int currentCount = 1; //always gonna be at least 1 occurence of current num
+
+    //freq variables to be updated if conditions are met
+    int freqNum = nums[0];
+    int freqCount = 1;
+
+    if(nums.length == 0){ return 0; }
+
+    for(int i = 0; i < nums.length; i++){
+      //if nums[i] == currentNum, count++, currentNum = num[i];
+      if(nums[i] == currentNum){
+        currentCount++;
+      }
+      //if no match between current i and current num, if currentCount is greater than freqCount, set freqNum to the currentNum since that would be the highest counted num so far
+      else if (currentCount > freqCount){
+        freqCount = currentCount;
+        freqNum = currentNum;
+      }
+      //keep track of current num
+      currentNum = nums[i];
+      //reset count to 1 to consider other nums
+      currentCount = 1;
+
+    }
+
+
+    return freqNum;
   }
 }
