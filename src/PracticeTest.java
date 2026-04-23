@@ -15,6 +15,6 @@ public class PracticeTest {
     // act
     int actual = Practice.mostCommonTimeEfficient(nums);
     // assert
-    assertEquals(expected, actual, "tie break by choosing element that appears first.")
+    assertEquals(expected, actual, "tie break by choosing element that appears first.");
   }
 }
