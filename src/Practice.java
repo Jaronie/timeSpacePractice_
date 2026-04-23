@@ -43,8 +43,8 @@ public class Practice {
     return frequencies;
   }
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: O(n^2) because the loop increments by 2
+  // Space Complexity: Also O(n^2) because the evens list stores n*n, this grows quadratically.
   // Remember to define your variables!
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
@@ -54,8 +54,8 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: O(n) the loop touches each N once before adding to the result.
+  // Space Complexity: O(n) is linear to the elements
   // Remember to define your variables!
   public static List<Integer> concatVals(Map<Integer, List<Integer>> map) {
     List<Integer> result = new ArrayList<>();
@@ -68,8 +68,8 @@ public class Practice {
     return result;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: o(1) because it runs 7 times only (constant value)
+  // Space Complexity: o(1) because it also stores 7 times only
   // Remember to define your variables!
   public static List<Character> septuple(char c) {
     List<Character> result = new ArrayList<>();
@@ -79,8 +79,8 @@ public class Practice {
     return result;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: o(n) or o(rows and columns) it goes by how many rows and columns there are or n or linear
+  // Space Complexity: o(n) or o(rows and columns) it measures the memory comparitively.
   // Remember to define your variables!
   public static char[][] initCharRect(int rows, int cols) {
     return new char[rows][cols];
