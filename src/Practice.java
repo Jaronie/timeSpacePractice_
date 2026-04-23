@@ -88,8 +88,8 @@ public class Practice {
 
   // Assume all strings in strs are of length s
   // Hint: charAt is an O(1) operation in both time and space
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: O(n) runs n times where n = str.length
+  // Space Complexity: O(n) where n = str.length, adding charAt() per length of string although charAt is O(1) lookup
   // Remember to define your variables!
   public static List<Character> concatStrings(List<String> strs) {
     List<Character> concat = new ArrayList<>();
@@ -101,8 +101,8 @@ public class Practice {
     return concat;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: O(1) the arithmetic expressions are always going to return a constant value
+  // Space Complexity: O(1) because the variables are primitive/constant
   // Remember to define your variables!
   public static int cubic(int n, int a, int b, int c, int d) {
     int result = d;
